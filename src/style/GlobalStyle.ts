@@ -8,6 +8,7 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
+    font-size: 62.5%;
     min-height: 100%;
     background-color: #202020;
   }
