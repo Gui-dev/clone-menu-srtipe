@@ -2,7 +2,7 @@ import React from 'react';
 
 import { DevelopersWrapper } from './style';
 
-export const Developers = () => (
+export const Developers: React.FC = () => (
   <DevelopersWrapper>
     <div className="primary">
       <span className="documentation" />

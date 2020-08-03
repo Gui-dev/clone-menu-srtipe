@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ProductsWrapper } from './style'
 
-export const Products = () => (
+export const Products: React.FC = () => (
   <ProductsWrapper>
     <ul className="primary">
       <li>
