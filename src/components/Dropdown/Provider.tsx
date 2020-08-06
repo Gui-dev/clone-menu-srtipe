@@ -36,6 +36,20 @@ export const DropdownProvider: React.FC = ( { children } ) => {
     ]  )
   }, [ setOptions ] )
 
+  const updateOptionsProps = useCallback((optionId: string, props: object) => {
+    setOptions(items => items.map(item => {
+      if (item.id === optionId) {
+        item = { ...item, ...props}
+      }
+      return item
+    }))
+  }, [setOptions])
+
+  const getOptionById = useCallback((id: string) =>
+    options.find((item) => item.id === id),
+    [options]
+  )
+
   return (
     <Context.Provider value={ {
 
