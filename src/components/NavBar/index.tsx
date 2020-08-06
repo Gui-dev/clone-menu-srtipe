@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Container } from './style'
-import DropdownOption from './../DropdownOption'
+import Dropdown from './../Dropdown'
 import { Products, Developers, Company } from './../Content'
 
 const NavBar: React.FC = () => {
@@ -9,21 +9,21 @@ const NavBar: React.FC = () => {
     <Container>
         <ul>
           <li>
-            <DropdownOption
+            <Dropdown
               name="Produtos"
-              content={() => <h1>Produtos</h1>}
+              content={ Products }
             />
           </li>
           <li>
-            <DropdownOption
+            <Dropdown
               name="Desenvolvedores"
-              content={() => <h1>Desenvolvedores</h1>}
+              content={ Developers }
             />
           </li>
           <li>
-            <DropdownOption
+            <Dropdown
               name="Empresa"
-              content={() => <h1>Empresa</h1>}
+              content={ Company }
             />
           </li>
         </ul>
