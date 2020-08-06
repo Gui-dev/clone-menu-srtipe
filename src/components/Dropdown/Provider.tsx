@@ -50,6 +50,10 @@ export const DropdownProvider: React.FC = ( { children } ) => {
     [options]
   )
 
+  const deleteOptionById = useCallback((id: string) => {
+    setOptions(items => items.filter((item) => item.id !== id))
+  }, [setOptions])
+
   return (
     <Context.Provider value={ {
 
