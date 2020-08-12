@@ -7,10 +7,8 @@ interface IDropdownOption {
   content: React.FC,
 }
 
-const DropdownOption: React.FC<IDropdownOption> = ( { name, content: Content } ) => {
+export const DropdownOption: React.FC<IDropdownOption> = ( { name, content: Content } ) => {
   return (
     <Button>{name}</Button>
   )
 }
-
-export default DropdownOption

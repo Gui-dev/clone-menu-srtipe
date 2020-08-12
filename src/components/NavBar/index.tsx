@@ -1,32 +1,35 @@
 import React from 'react'
 
 import { Container } from './style'
-import Dropdown from './../Dropdown'
+import { DropdownOption } from './../Dropdown'
+import { DropdownProvider } from './../Dropdown/Provider'
 import { Products, Developers, Company } from './../Content'
 
 const NavBar: React.FC = () => {
   return (
     <Container>
+      <DropdownProvider>
         <ul>
           <li>
-            <Dropdown
+            <DropdownOption
               name="Produtos"
               content={ Products }
             />
           </li>
           <li>
-            <Dropdown
+            <DropdownOption
               name="Desenvolvedores"
               content={ Developers }
             />
           </li>
           <li>
-            <Dropdown
+            <DropdownOption
               name="Empresa"
               content={ Company }
             />
           </li>
         </ul>
+      </DropdownProvider>
     </Container>
   )
 }
